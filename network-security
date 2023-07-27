@@ -1,0 +1,60 @@
+# Week 2 | Computer Networks and the Internet
+
+## TASK 1. View Your Addresses Using PowerShell:
+
+To view MAC Addresses using powershell, we use Get-NetAdapter command. It will show you all MAC Addresses of your device.
+
+![image](https://user-images.githubusercontent.com/128937115/227766560-879229b6-4675-483d-b907-e817d3e6956f.png)
+
+To view IP Addresses of your device using powershell, we use Get-NetIPAddress command.
+
+![image](https://user-images.githubusercontent.com/128937115/227766612-0148233b-a725-4792-82ba-1c114601d882.png)
+
+## TASK 2. Ping Your Local Router:
+
+As you can see from above pictures my main interface in with index 34 which is up. So i will check ip address for this specific interface using command 
+GET-NETIPAdress -Interface Index 34 
+
+![image](https://user-images.githubusercontent.com/128937115/227767565-09cf3980-808f-403b-a334-82a3249d5de0.png)
+
+As you can see the IP address for this specific interface is 192.168.0.118 which is configured on my device end. 
+So this will be the destination IP for my local router to my device. To ping local router we need Source IP which will be 
+destination IP - 1. Therefore the source ip for this will be 192.168.0.117. So ping local router we require to ping to our source IP.
+
+![image](https://user-images.githubusercontent.com/128937115/227767946-e93d2819-c141-4179-9419-899d4f937aeb.png)
+
+The delay between my computer and local router can be see in the last column of above picture.
+
+First packet showing the maximum delay of 311ms. Because first packet use to build connection between source and destination.
+
+The minimum delay between my computer and local router is 18ms. 
+
+This delay between packets reaching from destination to source will be decreased if you using a wired connection. As i am using a wireless connection
+thats the reason the delay is big. The delay can also be vary over time due to congestion of packets on your link.
+
+## TASK 3. Ping your OpenWRT Linux Server:
+
+To check MAC and IP addresses on linux server using  IP Link and IP Address command.
+
+![image](https://user-images.githubusercontent.com/128937115/227769676-fa2e0c56-37dc-4a2d-a21d-05a25045a19d.png)
+
+![image](https://user-images.githubusercontent.com/128937115/227769654-2e5f52b5-afa9-4090-a334-8b478c02a798.png)
+
+To ping Linux server from my windows, I need to ping 192.168.56.2 as destination IP for Server. 
+
+![image](https://user-images.githubusercontent.com/128937115/227769343-ca885b5b-9683-4cc5-9b66-aa24764908ea.png)
+
+To capture Packets you sending from your source or any other source on Linux you need to run command icpdump on linux server.
+
+![image](https://user-images.githubusercontent.com/128937115/227769560-6af4db7b-7cd4-487c-b4b1-83d082ce2723.png)
+
+## TASK 4. Trace Path Through the Internet:
+
+Tracing Path using Online tool [from ](http://looking-glass.connect.com.au/lg) for a local site
+
+![image](https://user-images.githubusercontent.com/128937115/227770132-93de88c8-8f26-400d-8052-6623db91d748.png)
+
+Tracing Path using Online tool [from ](http://looking-glass.connect.com.au/lg) for an international destination site
+
+![image](https://user-images.githubusercontent.com/128937115/227770246-abd9e8a9-16cb-44c3-8aa4-5b208a87e6f0.png)
+
